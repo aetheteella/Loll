@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hey bestie!!❤️</title>
+    <style>
+        /* knni.css - Basic Styling -  You'll want to expand on this! */
+        body {
+            background-color: #f0f0f0; /* Example background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .envelop {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            perspective: 1000px; /* For 3D effect */
+        }
+
+        .envelop__front-paper, .envelop__back-paper, .envelop__up-paper, .envelop__sticker, .envelop__false-sticker {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff; /* Example color */
+            border: 1px solid #ccc; /* Example border */
+        }
+
+        .envelop__up-paper {
+            transform-origin: top;
+            transition: transform 0.5s ease-in-out; /* Smooth animation */
+        }
+
+        .envelop__content {
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            width: 80%;
+            height: 60%;
+            /* Add overflow and scrolling if content is too large */
+            overflow-y: auto;
+        }
+
+        .love-notes {
+           /*  Add styling for your notes container */
+        }
+
+        .note {
+            margin-bottom: 10px; /* Space between notes */
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+
+        /* Example of opening animation - You'll trigger this with JS */
+        .open .envelop__up-paper {
+            transform: rotateX(-120deg); /* Or other transform you want */
+        }
+
+        .envelop__sticker {
+            /* Style your sticker */
+            background-color: yellow; /* Example */
+            width: 50px;
+            height: 30px;
+            top: 10px;
+            right: 10px;
+        }
+
+        .envelop__false-sticker {
+            /* Style your false sticker (if needed) */
+        }
+    </style>
+</head>
+<body>
+    <div class="envelop">
+        <div class="envelop__front-paper"></div>
+        <div class="envelop__back-paper"></div>
+        <div class="envelop__up-paper js-up-paper"></div>
+        <div class="envelop__sticker js-sticker"></div>
+        <div class="envelop__false-sticker"></div>
+        <div class="envelop__content js-envelop-content">
+            <div class="love-notes">
+                <div class="note js-note">
+                    <div class="note__text">
+                        <p>Oii minha princesa, aqui estamos completando mais um mês juntos, é sempre uma alegria poder acordar e saber que tenho você ao meu lado e sentir que isso será para sempre é magnífico</p>
+                    </div>
+                </div>
+                <div class="note js-note">
+                    <div class="note__text">
+                        <p>quero que eles nunca acabem e que tenham sempre muitos outros pela frente.</p>
+                    </div>
+                </div>
+                <div class="note js-note">
+                    <div class="note__text">
+                        <p>você é a melhor coisa que me aconteceu, obrigado por me escolher todos os dias.</p>
+                        <p>Te amo muito! &hearts;.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // knni.js - Basic JavaScript
+        const envelop = document.querySelector('.envelop');
+        const upPaper = document.querySelector('.js-up-paper');
+        const sticker = document.querySelector('.js-sticker'); // If you need it
+
+        //  Add event listener to open the envelope.  You can change the trigger
+        // to a button or other event if you prefer.
+        envelop.addEventListener('click', () => {
+             envelop.classList.toggle('open');  // Toggle the 'open' class
+        });
+
+
+        // You can add more JavaScript here for other interactions, 
+        // like handling the sticker or more complex animations.
+    </script>
+</body>
+</html>
